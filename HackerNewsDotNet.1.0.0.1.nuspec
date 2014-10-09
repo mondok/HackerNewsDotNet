@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>HackerNewsDotNet</id>
+        <version>1.0.0.1</version>
+        <authors>Matt Mondok</authors>
+        <licenseUrl>https://github.com/mondok/HackerNewsDotNet/blob/master/LICENSE</licenseUrl>
+        <projectUrl>https://github.com/mondok/HackerNewsDotNet</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Hacker News has partnered with Firebase to create a real API.  This is a .NET client to that API.  With this API, you can get top stories, lookup items, and lookup profiles.</description>
+        <summary />
+        <releaseNotes>First release</releaseNotes>
+        <language />
+        <tags>hackernews, api</tags>
+    </metadata>
+    <files>
+        <file src="HackerNewsDotNet\bin\Debug\lib\HackerNewsDotNet.dll" target="lib\HackerNewsDotNet.dll" />
+        <file src="HackerNewsDotNet\bin\Debug\lib\HackerNewsDotNet.pdb" target="lib\HackerNewsDotNet.pdb" />
+    </files>
+</package>
