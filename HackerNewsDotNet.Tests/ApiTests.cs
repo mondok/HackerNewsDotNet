@@ -41,6 +41,32 @@ namespace HackerNewsDotNet.Tests
             HackerNewsApi client = new HackerNewsApi();
             IEnumerable<HackerNewsItem> ids = client.TopStories(2);
             Assert.IsTrue(ids.Count() == 2);
+            Assert.IsTrue(ids.ElementAt(0) != null);
+            Assert.IsTrue(ids.ElementAt(1) != null);
+        }
+
+        [TestMethod]
+        public void CanGetMaxTopStories()
+        {
+            HackerNewsApi client = new HackerNewsApi();
+            IEnumerable<HackerNewsItem> ids = client.TopStories(105);
+            Assert.IsTrue(ids.Count() == 100);
+        }
+
+        [TestMethod]
+        public void CanNotPassNegativeToTopStories()
+        {
+            HackerNewsApi client = new HackerNewsApi();
+            IEnumerable<HackerNewsItem> ids = client.TopStories(-1);
+            Assert.IsTrue(ids.Count() == 0);
+        }
+
+        [TestMethod]
+        public void CanAskForInvalidItem()
+        {
+            HackerNewsApi client = new HackerNewsApi();
+            HackerNewsItem item = client.NewsItem(int.MaxValue).Result;
+            Assert.IsTrue(item == null);
         }
     }
 }

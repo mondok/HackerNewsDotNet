@@ -25,8 +25,10 @@ namespace HackerNewsDotNet
         /// <returns>IEnumerable&lt;HackerNewsItem&gt;.</returns>
         public IEnumerable<HackerNewsItem> TopStories(int limit = 100)
         {
-            IEnumerable<int> topStoryIds = TopStoryIds().Result;
-            for (int i = 0; i < limit; i++)
+            if (limit <= 0) yield break;
+            List<int> topStoryIds = TopStoryIds().Result.ToList();
+            int floor = limit < topStoryIds.Count ? limit : topStoryIds.Count;
+            for (int i = 0; i < floor; i++)
             {
                 yield return NewsItem(topStoryIds.ElementAt(i)).Result;
             }

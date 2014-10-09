@@ -51,7 +51,7 @@
     <Compile Include="HackerNewsApi.cs" />
     <Compile Include="HackerNewsConstants.cs" />
     <Compile Include="HackerNewsItemType.cs" />
-    <Compile Include="Model\HackerNewsItem.cs" />
+    <Compile Include="Properties\HackerNewsItem.cs" />
     <Compile Include="Model\HackerNewsUserProfile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
