@@ -95,8 +95,10 @@ _TeamCity*
 # DotCover is a Code Coverage Tool
 *.dotCover
 
+
 # GhostDoc
 *.GhostDoc*
+
 
 # NCrunch
 _NCrunch_*
